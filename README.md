@@ -23,5 +23,14 @@ DOLOS is a online reality-TV gameshow based deception dataset curated for multim
 
 ## Training
 
-+ Data Pre-Processing - 
-+ scripts - contains PyTorch scripts to train the model on Dolos dataset
++ **Data Pre-Processing** - Run [extract_face_frames.py and video_to_audio.py](https://github.com/NMS05/AV-Data-Processing) to extract the RGB face frames and '.wav' audio files from the downloaded videos.
++ **scripts/** - Contains the PyTorch code to train the model on the pre-processed Dolos dataset. The scripts are organized as follows,
+    - dataloader/
+        - audio_visual_dataset.py = Requires '.csv' files from Training_Protocols. Upon call, it returns the (audio wavefrom, face frames, labels) as a torch tensor.
+    - models/
+        - adapter.py = Contains the NLP adapter and Uniform Temporal Adapter (UTA) for Wav2Vec2 and ViT model.
+        - audio_model.py = Wav2Vec2 model for audio (speech) deception detection.
+        - visual_model.py = ViT-B16 model for visual (facial) deception detection.
+        - fusion_model.py = (Wav2Vec2 + ViT-B16) with Plug-in Audio-Visual Fusion (PAVF) for multimodal deception detection.
+    - train_test.py = script to train model(s) for unimodal and multim odal deception detection.
+    - run train_fusion.sh for reproducibility. 
