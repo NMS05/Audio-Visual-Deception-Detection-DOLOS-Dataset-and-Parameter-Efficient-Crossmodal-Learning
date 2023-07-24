@@ -32,5 +32,5 @@ DOLOS is a online reality-TV gameshow based deception dataset curated for multim
         - audio_model.py = Wav2Vec2 model for audio (speech) deception detection.
         - visual_model.py = ViT-B16 model for visual (facial) deception detection.
         - fusion_model.py = (Wav2Vec2 + ViT-B16) with Plug-in Audio-Visual Fusion (PAVF) for multimodal deception detection.
-    - train_test.py = script to train model(s) for unimodal and multim odal deception detection.
-    - run train_fusion.sh for reproducibility. 
+    - train_test.py = script to train model(s) for unimodal and multimodal deception detection.
+    - run **train_fusion.sh** for reproducibility. 
