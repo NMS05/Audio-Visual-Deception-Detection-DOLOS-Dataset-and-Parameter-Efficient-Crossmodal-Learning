@@ -1,18 +1,27 @@
 # Audio-Visual-Deception-Detection-DOLOS-Dataset-and-Parameter-Efficient-Crossmodal-Learning
 
 This is the official repo of the paper [Audio-Visual Deception Detection: DOLOS Dataset and Parameter-Efficient
-Crossmodal Learning](https://arxiv.org/abs/2303.12745) published at ICCV 2023. DOLOS is a online reality-TV gameshow based deception dataset, which can be used for multimodal deception detection research.
+Crossmodal Learning](https://arxiv.org/abs/2303.12745) published at ICCV 2023.
 
 ## DOLOS Dataset
 
-+ Dolos.xlsx - The original Dolos dataset with MUMIN annotations. Every sample contains a YouTube video link to the gameshow, its time stamp and its corresponding label (truth or deception).
+DOLOS is a online reality-TV gameshow based deception dataset curated for multimodal deception detection research. The DOLOS dataset can be downloaded from [ROSE Lab, NTU](https://rose1.ntu.edu.sg/). The dataset is organized as follows,
 
-+ dolos_timestamps(.txt/.csv) - This file is used to download the Dolos dataset. Run the script [YT_video_downloader.py](https://github.com/NMS05/AV-Data-Processing) and pass the timestamps file as an argument. It will automatically download (only those currently available) from YouTube and save them as .mp4 files.
++ **Dolos.xlsx** - This spreadsheet contains the original and unprocessed DOLOS dataset with MUMIN annotations. Every sample (row) contains the following information
+    - YouTube video link to the gameshow, time stamps and its corresponding label (truth or deception).
+    - Metadata: file_name, subject_name, subject_gender
+    - MUMIN annotations as nested list of time intervals
 
-+ train_dolos.xlsx - This file contains the processed MUMIN annotations for dolos dataset. To be used for multi-task learning.
++ **dolos_timestamps(.txt/.csv)** - This file can be used to download the Dolos dataset. Run the script [YT_video_downloader.py](https://github.com/NMS05/AV-Data-Processing) and pass this timestamps file as an argument. It will automatically download the videos (only those currently available) from YouTube and save them as .mp4 files.
+
++ **train_dolos.xlsx** - This file contains the MUMIN features as binary annotations, which can be used for multi-task learning. This file is also suited for PyTorch DataLoader.
+
++ **Training_Protocols/** - This folder contains the training protocols used for experiments in the paper.
+  - train_fold.csv/test_fold.csv = used for 3-fold evaluation of multimodal deception detector
+  - long.csv/short.csv = to investigate the perfomance with respect to variability in speaking (deception) duration
+  - male.csv/female.csv = protocol to investigate the influence of gender in deception detector
 
 ## Training
 
++ Data Pre-Processing - 
 + scripts - contains PyTorch scripts to train the model on Dolos dataset
-
-+ training_protocols - 3 training protocols used in the paper
