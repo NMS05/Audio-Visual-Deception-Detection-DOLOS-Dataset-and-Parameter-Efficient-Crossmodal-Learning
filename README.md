@@ -3,9 +3,11 @@
 This is the official repo of the paper [Audio-Visual Deception Detection: DOLOS Dataset and Parameter-Efficient
 Crossmodal Learning](https://arxiv.org/abs/2303.12745) published at ICCV 2023.
 
-## DOLOS Dataset
+# DOLOS Dataset
 
-DOLOS is a online reality-TV gameshow based deception dataset curated for multimodal deception detection research. The DOLOS dataset can be downloaded from [ROSE Lab, NTU](https://rose1.ntu.edu.sg/). The dataset is organized as follows,
+<img src="https://github.com/NMS05/Audio-Visual-Deception-Detection-DOLOS-Dataset-and-Parameter-Efficient-Crossmodal-Learning/blob/main/imgs/data_dist.png" width="800" height="450"> 
+
+**DOLOS** is a online reality-TV gameshow based deception dataset curated for multimodal deception detection research. The DOLOS dataset can be downloaded from [ROSE Lab, NTU](https://rose1.ntu.edu.sg/). The dataset is organized as follows,
 
 + **Dolos.xlsx** - This spreadsheet contains the original and unprocessed DOLOS dataset with MUMIN annotations. Every sample (row) contains the following information
     - YouTube video link to the gameshow, time stamps and its corresponding label (truth or deception).
@@ -21,7 +23,9 @@ DOLOS is a online reality-TV gameshow based deception dataset curated for multim
   - long.csv/short.csv = to investigate the perfomance with respect to variability in speaking (deception) duration
   - male.csv/female.csv = protocol to investigate the influence of gender in deception detector
 
-## Training
+# Training
+
+<img src="https://github.com/NMS05/Audio-Visual-Deception-Detection-DOLOS-Dataset-and-Parameter-Efficient-Crossmodal-Learning/blob/main/imgs/pecl.png" width="850" height="400"> 
 
 + **Data Pre-Processing** - Run [extract_face_frames.py and video_to_audio.py](https://github.com/NMS05/AV-Data-Processing) to extract the RGB face frames and '.wav' audio files from the downloaded videos.
 + **scripts/** - Contains the PyTorch code to train the model on the pre-processed Dolos dataset. The scripts are organized as follows,
