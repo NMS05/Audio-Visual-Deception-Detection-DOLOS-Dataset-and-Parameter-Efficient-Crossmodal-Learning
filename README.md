@@ -7,7 +7,7 @@ Crossmodal Learning](https://arxiv.org/abs/2303.12745) published at ICCV 2023.
 
 <img src="https://github.com/NMS05/Audio-Visual-Deception-Detection-DOLOS-Dataset-and-Parameter-Efficient-Crossmodal-Learning/blob/main/imgs/data_dist.png" width="800" height="450"> 
 
-**DOLOS** is a online reality-TV gameshow based deception dataset curated for multimodal deception detection research. The DOLOS dataset can be downloaded from [ROSE Lab, NTU](https://rose1.ntu.edu.sg/). The dataset is organized as follows,
+**DOLOS** is a online reality-TV gameshow based deception dataset curated for multimodal deception detection research. The DOLOS dataset can be downloaded from [ROSE Lab, NTU](https://rose1.ntu.edu.sg/dataset/DOLOS/). The dataset is organized as follows,
 
 + **Dolos.xlsx** - This spreadsheet contains the original and unprocessed DOLOS dataset with MUMIN annotations. Every sample (row) contains the following information
     - YouTube video link to the gameshow, time stamps and its corresponding label (truth or deception).
